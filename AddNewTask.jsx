@@ -1,7 +1,7 @@
 import React from "react";
 
 
-// This is the input of our todo app
+//this is our Task adding section or our input section
 class AddNewTask extends React.Component {
 
   constructor() {
@@ -19,9 +19,12 @@ class AddNewTask extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.justSubmitted} >
-        <input type="text" placeholder="Enter Your order" />
-      </form>
+      <div>
+        <h3>Add New Task</h3>
+        <form onSubmit={this.justSubmitted} >
+          <input type="text" placeholder="Enter Your order" />
+        </form>
+      </div>
     );
   }
 }

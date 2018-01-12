@@ -1,28 +1,33 @@
 import React from "react";
 
+//this is the to do list section or our Output section
 class AppList extends React.Component {
   constructor() {
     super();
     this.remove = this.remove.bind(this);
   }
 
-  remove(elem) {
-    var value = elem.target.parentNode.querySelector('span').innerText;
-    this.props.remove(value);
+  remove(output) {  // remove function for removing a todo item
+    var value = output.target.parentNode.querySelector('span').innerText;  // our tatgetted element here is span which is at items below
+    this.props.remove(value); 
   }
 
   render() {
-    var items = this.props.tasks.map((elem, i) => {
-      return <li key={i}>
-        <span>{elem}</span>
-        <button onClick={this.remove}>X</button>
+    var items = this.props.tasks.map((output, i) => {
+      return <li className="list-group-item" key={i}>
+        <span>{output}</span>
+        <button onClick={this.remove} class="glyphicon glyphicon-remove"></button>
+        {/* onclicking this button we deletes a list item form our output list */}
       </li>
     });
 
     return (
-      <ul>
-        {items}
-      </ul>
+      <div>
+        <h3>Todo List</h3>
+        <ul className="list-group">
+          {items}
+        </ul>
+      </div>
     );
   }
 }
