@@ -16,7 +16,7 @@ class AppList extends React.Component {
     var items = this.props.tasks.map((output, i) => {
       return <li className="list-group-item" key={i}>
         <span>{output}</span>
-        <button onClick={this.remove} class="glyphicon glyphicon-remove"></button>
+        <button onClick={this.remove} className="glyphicon glyphicon-remove"></button>
         {/* onclicking this button we deletes a list item form our output list */}
       </li>
     });
