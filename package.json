@@ -1,0 +1,25 @@
+{
+  "name": "todo-do-reactjs",
+  "version": "1.0.0",
+  "description": "A todo react app",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1am1mran/todo-do-reactjs.git"
+  },
+  "author": "Imran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1am1mran/todo-do-reactjs/issues"
+  },
+  "homepage": "https://github.com/1am1mran/todo-do-reactjs#readme",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.1"
+  }
+}
