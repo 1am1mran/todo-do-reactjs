@@ -1,13 +1,14 @@
 import React from "react";
 import AddNewTask from "./AddNewTask.jsx";
-import AppList from "./AppList.jsx";
-
+// import AppList from "./AppList.jsx";
+import FilterList from "./FilterList.jsx";
 
 // This is the main to all the other componenets
 
 class App extends React.Component {
   constructor(props) {
     super();
+    // console.log(props);
     this.state = { tasks: props.tasks };
     this.updateList = this.updateList.bind(this);
     this.removeTask = this.removeTask.bind(this);
@@ -38,7 +39,7 @@ class App extends React.Component {
           <div className="col-xs-8 col-offset-2 col-sm-8 col-offset-2 col-xlg-6 col-offset-3">
             <h1>Todo App</h1>
             <AddNewTask updateList={this.updateList} />
-            <AppList tasks={this.state.tasks} remove={this.removeTask} />
+            <FilterList tasks={this.state.tasks} remove={this.removeTask} updateLocalStorage={this.updateLocalStorage} />
           </div>
         </div>
       </div>

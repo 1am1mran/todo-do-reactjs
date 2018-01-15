@@ -1,0 +1,13 @@
+li>button {
+    float: right;
+}
+
+
+/* li>input{
+    float: right;
+} */
+
+button:checked+label {
+    color: red;
+    text-decoration: line-through;
+}

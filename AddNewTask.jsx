@@ -21,7 +21,7 @@ class AddNewTask extends React.Component {
     return (
       <div>
         <h3>Add New Task</h3>
-        <form onSubmit={this.justSubmitted} >
+        <form className="form-horizontal" onSubmit={this.justSubmitted} >
           <input type="text" placeholder="Enter Your order" />
         </form>
       </div>
